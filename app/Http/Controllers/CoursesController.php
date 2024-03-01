@@ -5,14 +5,15 @@ namespace App\Http\Controllers;
 use App\Models\Course;
 use Illuminate\Http\Request;
 
-class CoursesControlller extends Controller
+class CoursesController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $courses = Course::all();
+        return response()->json($courses);
     }
 
     /**
